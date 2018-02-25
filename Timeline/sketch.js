@@ -22,6 +22,7 @@ function setup() {
       "RD Deadline",
       "AP", //7
       "Summer Essay Class",
+      "Summer School"
    ]
 }
 
@@ -93,15 +94,17 @@ function draw() {
 
       if (i == 6) {
          text(events[8], locT, locH - 50);
-
+         text(events[9], locT, locH-70);
+         text(events[2], locT, locH-90);
+         
          push()
          stroke(highlight)
          strokeWeight(2)
          line(locL, locLH, locL, locLH - 65);
          line(locL, locLH - 70 - lineS, locL, locLH - 70 - lineL)
+         line(locL, locLH - 90 - lineS, locL, locLH - 90 - lineL)
+         line(locL, locLH - 110 - lineS, locL, locLH - 110 - lineL)
          pop()
-
-
       }
 
       if (i == 8) {
@@ -118,6 +121,7 @@ function draw() {
       if (i == 10) {
          text(events[5], locT, locH - 50);
          text(events[1], locT, locH - 70);
+         text(events[2], locT, locH - 90);
 
          push()
          stroke(highlight)
@@ -125,12 +129,25 @@ function draw() {
          line(locL, locLH, locL, locLH - 65);
          line(locL, locLH - 70 - lineS, locL, locLH - 70 - lineL)
          line(locL, locLH - 90 - lineS, locL, locLH - 90 - lineL)
+         line(locL, locLH - 110 - lineS, locL, locLH - 110 - lineL)
+         pop()
+      }
+      
+      if (i == 11) {
+         text(events[2], locT, locH - 10);
+
+         push()
+         strokeWeight(2)
+         stroke(highlight)
+         line(locL, locLH, locL, locLH - 25);
+         line(locL, locLH - 30 - lineS, locL, locLH - 30 - lineL)
          pop()
       }
 
       if (i == 12) {
          text(events[6], locT, locH - 50);
          text(events[1], locT, locH - 70);
+         text(events[2], locT, locH - 90);
 
          push()
          strokeWeight(2)
@@ -138,6 +155,7 @@ function draw() {
          line(locL, locLH, locL, locLH - 65);
          line(locL, locLH - 70 - lineS, locL, locLH - 70 - lineL)
          line(locL, locLH - 90 - lineS, locL, locLH - 90 - lineL)
+         line(locL, locLH - 110 - lineS, locL, locLH - 110 - lineL)
          pop()
       }
 
@@ -146,7 +164,7 @@ function draw() {
       if (i == 0 || i == 12) {
          fill(highlight)
          text("12", locTxt, locHTxt);
-      } else if (i == 3 || i == 5 || i == 6 || i == 8 || i == 10) {
+      } else if (i == 3 || i == 5 || i == 6 || i == 8 || i == 10 || i ==11) {
          fill(highlight)
          text(i, locTxt, locHTxt);
       } else {
